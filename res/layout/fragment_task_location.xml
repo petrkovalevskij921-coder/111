@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/new_task_layout" android:background="?panelBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="1.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout android:id="@id/new_task_app_bar" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:liftOnScroll="false">
+            <com.google.android.material.appbar.MaterialToolbar android:id="@id/new_task_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_collapseMode="pin" app:navigationIcon="@null" app:titleCentered="true" app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium" app:titleTextColor="@color/secondaryColor" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.yandex.mapkit.mapview.MapView android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@id/btnShowCurrentLocation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:src="@drawable/baseline_location_on_24" android:contentDescription="@null" android:layout_marginEnd="12.0dip" app:backgroundTint="@color/white" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

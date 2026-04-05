@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/custom_canvas" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/image_rectangle" android:focusable="true" android:clickable="true" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginBottom="@dimen/text20" android:src="@drawable/baseline_crop_square_24" app:layout_constraintBottom_toTopOf="@id/image_brush" app:layout_constraintEnd_toEndOf="@id/image_brush" />
+    <ImageView android:id="@id/image_brush" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginBottom="50.0dip" android:src="@drawable/baseline_brush_24" android:layout_marginEnd="20.0dip" app:layout_constraintBottom_toTopOf="@id/input_layout" app:layout_constraintEnd_toEndOf="parent" />
+    <com.google.android.material.textfield.TextInputLayout android:id="@id/input_layout" android:background="#59f80505" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="@dimen/text20" android:layout_marginEnd="@dimen/text20" app:boxStrokeColor="@color/red" app:counterTextColor="@color/red" app:endIconCheckable="true" app:endIconDrawable="@drawable/baseline_send_24" app:endIconMode="custom" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText android:textColorHint="@color/red" android:id="@id/input_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

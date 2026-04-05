@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/activity_authorization_0" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textview.MaterialTextView android:id="@id/connection_notice" android:tag="binding_1" android:background="@color/red_error_light" android:layout_width="fill_parent" android:layout_height="20.0dip" android:text="@string/no_internet_connection" android:textAlignment="center" android:elevation="100.0sp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <fragment android:name="androidx.navigation.fragment.NavHostFragment" android:id="@id/nav_host_not_authorized_fragment" android:layout_width="0.0dip" android:layout_height="fill_parent" app:defaultNavHost="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

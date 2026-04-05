@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@id/map_toolbar" android:background="@color/primaryDarkColor" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:contentInsetStart="0.0sp" android:contentInsetLeft="0.0sp" app:contentInsetLeft="0.0sp" app:contentInsetStart="0.0sp" app:layout_collapseMode="pin" app:layout_constraintTop_toTopOf="parent" app:navigationIconTint="@color/secondaryColor" app:title="@null" app:titleCentered="true" />
+    <WebView android:id="@id/webView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

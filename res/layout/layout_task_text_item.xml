@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textview.MaterialTextView android:textColor="@color/secondaryColor" android:id="@id/textTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/title_new_task_work_type" android:labelFor="@id/ct_service_object_type_text_view" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/TextAppearance.MainTheme.Caption" />
+    <EditText android:id="@id/editValue" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/buttonClear" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/textTitle" style="@style/dialog_text_view_style" />
+    <androidx.appcompat.widget.AppCompatImageButton android:id="@id/buttonClear" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/delete_bin" app:layout_constraintBottom_toBottomOf="@id/textTitle" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/editValue" />
+</androidx.constraintlayout.widget.ConstraintLayout>

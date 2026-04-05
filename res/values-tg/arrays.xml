@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="task_car_type">
+        <item>Навъи кор интихоб кунед</item>
+        <item>Тоза кардани барф</item>
+        <item>Бахши махсус</item>
+    </string-array>
+    <string-array name="video_formats">
+        <item>720</item>
+        <item>480</item>
+        <item>240</item>
+    </string-array>
+</resources>

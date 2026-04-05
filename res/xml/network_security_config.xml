@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">minio-stages.neuroditech.ru</domain>
+        <domain includeSubdomains="true">stage4.neuroditech.ru</domain>
+        <domain includeSubdomains="true">stage5.neuroditech.ru</domain>
+        <domain includeSubdomains="true">s3.ru-1.storage.selcloud.ru</domain>
+        <domain includeSubdomains="true">cao.infocity.me</domain>
+        <domain includeSubdomains="true">zao.infocity.me</domain>
+        <domain includeSubdomains="true">uzao.infocity.me</domain>
+        <domain includeSubdomains="true">avtodor.neuroditech.ru</domain>
+        <domain includeSubdomains="true">svao.neuroditech.ru</domain>
+        <domain includeSubdomains="true">zao.neuroditech.ru</domain>
+        <domain includeSubdomains="true">uzao.neuroditech.ru</domain>
+        <trust-anchors>
+            <certificates src="@raw/server" />
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

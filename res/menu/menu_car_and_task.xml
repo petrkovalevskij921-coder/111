@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_baseline_map_24" android:id="@id/MapFragment" android:title="@string/map_title" />
+    <item android:icon="@drawable/ic_baseline_event_available_24" android:id="@id/TasksFragment" android:title="@string/task_title" />
+    <item android:icon="@drawable/baseline_commute_24" android:id="@id/CarAccountingFragment" android:title="@string/accounting" />
+    <item android:icon="@drawable/baseline_commute_24" android:id="@id/FlightsCarsDirectorsFragment" android:title="@string/flight" />
+    <item android:icon="@drawable/ic_baseline_person_24" android:id="@id/SettingsFragment" android:title="@string/settings_title" />
+</menu>

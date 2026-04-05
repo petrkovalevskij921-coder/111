@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/back" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:liftOnScroll="false">
+        <com.google.android.material.appbar.MaterialToolbar android:id="@id/location_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_collapseMode="pin" app:navigationIconTint="@color/app_blue" app:title="@string/map_background" app:titleCentered="true" app:titleTextColor="@color/app_blue" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/text18" android:text="@string/select_background_map" />
+    <RadioGroup android:orientation="vertical" android:id="@id/mapOverlayRadioGroup" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioButton android:id="@id/osmRadioButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/openstreetmap_osm" android:buttonTint="@color/app_blue" />
+        <RadioButton android:id="@id/osmInfocityRadioButton" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/osm_infocity" android:buttonTint="@color/app_blue" />
+        <RadioButton android:id="@id/yandexMapRadioButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/yandex_map" android:buttonTint="@color/app_blue" />
+        <RadioButton android:id="@id/googleMapRadioButton" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/google_map" android:buttonTint="@color/app_blue" />
+    </RadioGroup>
+    <Button android:id="@id/applyButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/button_apply" style="@style/ButtonStandardStyle" />
+</LinearLayout>

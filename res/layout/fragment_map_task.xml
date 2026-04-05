@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/new_task_layout" android:tag="layout/fragment_map_task_0" android:background="?panelBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="1.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout android:id="@id/new_task_app_bar" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:liftOnScroll="false">
+            <com.google.android.material.appbar.MaterialToolbar android:id="@id/new_task_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_collapseMode="pin" app:navigationIcon="@null" app:title="@string/create_task" app:titleCentered="true" app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium" app:titleTextColor="@color/secondaryColor" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.core.widget.NestedScrollView android:id="@id/create_task_scroll_pane" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="1.4" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="?panelBackground" android:padding="8.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ru.spaceapp.infocity.android.app.ui.task.ui.TaskSelectItemView android:id="@id/viewWorkType" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleSelectItem="@string/title_new_task_work_type" />
+                    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                    <ru.spaceapp.infocity.android.app.ui.task.ui.TaskSelectItemView android:id="@id/viewObjectType" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleSelectItem="@string/title_new_task_object_type" />
+                    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                    <ru.spaceapp.infocity.android.app.ui.task.ui.TaskSelectItemView android:id="@id/viewObjectName" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleSelectItem="@string/title_new_task_object_name" />
+                    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                    <com.google.android.material.button.MaterialButton android:id="@id/buttonContinueTaskCreation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/button_continue_task_creation" android:layout_marginHorizontal="24.0dip" app:backgroundTint="@color/app_blue" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutFiles" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.google.android.material.button.MaterialButton android:id="@id/buttonCustomCamera" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_margin="8.0dip" app:backgroundTint="@color/app_blue" app:icon="@drawable/ic_baseline_photo_camera_24" app:iconSize="40.0dip" app:iconTint="@color/white" style="@style/Widget.MaterialComponents.Button.Icon" />
+                        <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@id/listImages" android:background="?panelBackground" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="4.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+                    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                    <ru.spaceapp.infocity.android.app.ui.task.ui.TaskSelectItemView android:id="@id/viewRegulatoryDateTime" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleSelectItem="@string/task_body_regulatory_date" />
+                    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                    <ru.spaceapp.infocity.android.app.ui.task.ui.TaskSelectItemView android:id="@id/viewLifecycleDateTime" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleSelectItem="@string/task_body_lifetime_task" />
+                    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                    <ru.spaceapp.infocity.android.app.ui.task.ui.TaskSelectItemView android:id="@id/viewEcexutionCompany" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleSelectItem="@string/title_new_task_performer_organization" />
+                    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                    <ru.spaceapp.infocity.android.app.ui.task.ui.TaskSelectItemView android:id="@id/viewPerformer" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleSelectItem="@string/title_new_task_performer" />
+                    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                    <ru.spaceapp.infocity.android.app.ui.task.ui.TaskSelectItemView android:id="@id/viewPriority" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleSelectItem="@string/priority" />
+                    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                    <ru.spaceapp.infocity.android.app.ui.task.ui.TaskSelectItemView android:id="@id/viewTaskType" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleSelectItem="@string/task_type" />
+                    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                    <ru.spaceapp.infocity.android.app.ui.task.ui.TaskTextItemView android:id="@id/viewDescription" android:layout_width="fill_parent" android:layout_height="wrap_content" app:titleTextItem="@string/task_description" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.google.android.flexbox.FlexboxLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0sp" app:alignContent="space_between" app:alignItems="center" app:justifyContent="center">
+                            <com.google.android.material.button.MaterialButton android:id="@id/reset_button" android:text="@string/button_reset" android:layout_marginStart="@dimen/spacing_normal" android:backgroundTint="@color/yellow_color_picker" style="@style/CorneredButtonStyle" />
+                        </com.google.android.flexbox.FlexboxLayout>
+                        <com.google.android.flexbox.FlexboxLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_normal_plus" app:alignContent="space_between" app:alignItems="center" app:justifyContent="center">
+                            <com.google.android.material.button.MaterialButton android:id="@id/create_button" android:text="@string/button_create" android:layout_marginStart="@dimen/spacing_normal" android:backgroundTint="@color/sky_blue_color_picker" style="@style/CorneredButtonStyle" />
+                            <com.google.android.material.button.MaterialButton android:id="@id/close_button" android:text="@string/button_close" android:layout_marginStart="@dimen/spacing_normal" android:backgroundTint="@color/red_light_color_picker" style="@style/CorneredButtonStyle" />
+                        </com.google.android.flexbox.FlexboxLayout>
+                    </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.core.widget.NestedScrollView>
+            <ru.spaceapp.infocity.android.app.ui.task.TaskMapView android:id="@id/viewTaskMap" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

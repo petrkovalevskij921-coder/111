@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="infocity_black">#ffdcd9d9</color>
+    <color name="infocity_report_dark">#ff635345</color>
+    <color name="infocity_report_light">#ff554f3d</color>
+    <color name="infocity_snackBarBgColor">#ff28292b</color>
+    <color name="interstitial_close_layout">#99ffffff</color>
+    <color name="interstitial_dialog_background">#cc000000</color>
+    <color name="interstitial_text">#ff000000</color>
+</resources>

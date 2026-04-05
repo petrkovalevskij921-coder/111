@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exo_controls_playback_speeds">
+        <item>0,25x</item>
+        <item>0,5x</item>
+        <item>0,75x</item>
+        <item>Normal</item>
+        <item>1,25x</item>
+        <item>1,5x</item>
+        <item>2x</item>
+    </string-array>
+    <string-array name="task_car_type">
+        <item>Ish turini tanlang</item>
+        <item>Qorni tozalash</item>
+        <item>Maxsus sektor</item>
+    </string-array>
+    <string-array name="video_formats">
+        <item>720</item>
+        <item>480</item>
+        <item>240</item>
+    </string-array>
+</resources>

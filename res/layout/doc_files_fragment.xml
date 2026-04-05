@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/task_detail_app_bar" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" app:liftOnScroll="true">
+        <com.google.android.material.appbar.MaterialToolbar android:id="@id/document_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:contentInsetStart="0.0sp" android:contentInsetLeft="0.0sp" app:contentInsetLeft="0.0sp" app:contentInsetStart="0.0sp" app:layout_collapseMode="pin" app:navigationIconTint="@color/secondaryColor" app:title="@null" app:titleCentered="true" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <ImageView android:id="@id/selectedImage" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="16.0dip" android:scaleType="fitCenter" app:layout_constraintDimensionRatio="1:1" app:layout_constraintTop_toBottomOf="@id/task_detail_app_bar" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/filesRv" android:layout_width="fill_parent" android:layout_height="160.0dip" android:layout_margin="16.0dip" app:layout_constraintTop_toBottomOf="@id/selectedImage" />
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/green" android:id="@id/saveDocTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="@string/save" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/filesRv" />
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/blue_color_picker" android:id="@id/addFileTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="@string/add" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/filesRv" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/loadingProgressBar" android:background="@color/loading_transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="?android:progressBarStyle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

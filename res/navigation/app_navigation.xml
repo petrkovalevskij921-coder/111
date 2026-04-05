@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/mobile_navigation" app:startDestination="@id/TasksFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <action android:id="@id/actionGlobalToMapFragments" app:destination="@id/MapFragment" app:launchSingleTop="true" app:popUpTo="@id/TasksFragment" app:popUpToInclusive="false" />
+    <activity android:name="ru.spaceapp.infocity.android.app.ui.main.MainActivity" android:id="@id/MainActivity" />
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.settings.SettingsFragment" android:id="@id/SettingsFragment">
+        <action android:id="@id/actionSettingsToSynchFiles" app:destination="@id/SynchFilesFragment" app:launchSingleTop="false" app:popUpTo="@id/SettingsFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/actionSettingsToSettingsCache" app:destination="@id/SettingsCacheFragment" />
+        <action android:id="@id/actionSettingsToRulePermissions" app:destination="@id/RulePermissionsFragment" app:enterAnim="@anim/slide_up" app:exitAnim="@anim/slide_down" app:popUpTo="@id/SettingsFragment" app:popUpToInclusive="false" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.settings.SettingsFragment" android:id="@id/SettingsFragments">
+        <action android:id="@id/actionSettingsToSynchFiles" app:destination="@id/SynchFilesFragment" app:launchSingleTop="false" app:popUpTo="@id/SettingsFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/actionSettingsToSettingsCache" app:destination="@id/SettingsCacheFragment" />
+        <action android:id="@id/actionSettingsToRulePermissions" app:destination="@id/RulePermissionsFragment" app:enterAnim="@anim/slide_up" app:exitAnim="@anim/slide_down" app:popUpTo="@id/SettingsFragment" app:popUpToInclusive="false" />
+    </fragment>
+    <activity android:name="ru.spaceapp.infocity.android.app.ui.authorization.AuthorizationActivity" android:id="@id/AuthorizationActivity" />
+    <action android:id="@id/actionGlobalNotAuthorized" app:destination="@id/AuthorizationActivity" app:launchSingleTop="true" />
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.tasks.TasksFragment" android:id="@id/TasksFragment">
+        <action android:id="@id/actionTasksToTasksFilter" app:destination="@id/TasksFilterFragment" app:launchSingleTop="false" app:popUpTo="@id/TasksFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/actionTasksToaskDetail" app:destination="@id/TaskFragment" />
+        <action android:id="@id/actionTasksToSynchFiles" app:destination="@id/SynchFilesFragment" app:launchSingleTop="false" app:popUpTo="@id/TasksFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/actionTasksToCreateTask" app:destination="@id/CreateTaskFragment" app:popUpTo="@id/TasksFragment" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.tasks.TasksFragment" android:id="@id/TasksFragments">
+        <action android:id="@id/actionTasksToTasksFilter" app:destination="@id/TasksFilterFragment" app:launchSingleTop="false" app:popUpTo="@id/TasksFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/actionTasksToaskDetail" app:destination="@id/TaskFragment" />
+        <action android:id="@id/actionTasksToSynchFiles" app:destination="@id/SynchFilesFragment" app:launchSingleTop="false" app:popUpTo="@id/TasksFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/actionTasksToCreateTask" app:destination="@id/CreateTaskFragment" app:popUpTo="@id/TasksFragment" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.report.ReportListFragment" android:id="@id/ReportListFragments">
+        <action android:id="@id/actionReportListToReport" app:destination="@id/reportFragment" app:launchSingleTop="false" app:popUpTo="@id/ReportListFragment" app:popUpToInclusive="false" />
+    </fragment>
+    <fragment android:label="ReportFragment" android:name="ru.spaceapp.infocity.android.app.ui.report.ReportFragment" android:id="@id/reportFragment">
+        <argument android:name="report" app:argType="string" />
+        <argument android:name="message" app:argType="string" />
+        <argument android:name="error" app:argType="string" app:nullable="true" />
+        <argument android:name="filename" app:argType="string" app:nullable="true" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.map.MapFragment" android:id="@id/MapFragment">
+        <action android:id="@id/action_MapFragment_to_YandexMapFragment" app:destination="@id/yandexMapFragment" app:popUpTo="@id/MapFragment" app:popUpToInclusive="true" />
+        <action android:id="@id/action_MapFragment_to_googleMapFragment" app:destination="@id/googleMapFragment" app:popUpTo="@id/MapFragment" app:popUpToInclusive="true" />
+        <action android:id="@id/action_MapFragment_to_osmMapFragment" app:destination="@id/osmMapFragment" app:popUpTo="@id/MapFragment" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.tasks.filters.TasksFilterFragment" android:id="@id/TasksFilterFragment">
+        <argument android:name="filter" app:argType="ru.spaceapp.infocity.android.app.domain.filters.TaskFilterParcelable" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.tasks.task.TaskFragment" android:id="@id/TaskFragment">
+        <argument android:name="taskId" app:argType="string" />
+        <action android:id="@id/actionTaskToCamera" app:destination="@id/CameraFragment" app:enterAnim="@anim/slide_in_bottom" app:exitAnim="@anim/slide_out_bottom" app:launchSingleTop="false" app:popUpTo="@id/TaskFragment" />
+        <action android:id="@id/actionTaskToSynchFiles" app:destination="@id/SynchFilesFragment" app:launchSingleTop="false" app:popUpTo="@id/TaskFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/actionTaskToEditTask" app:destination="@id/EditTaskFragment" app:enterAnim="@anim/slide_in_bottom" app:exitAnim="@anim/slide_out_bottom" app:popUpTo="@id/TaskFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/actionTaskToDocument" app:destination="@id/DocumentsFragment" app:enterAnim="@anim/slide_in_bottom" app:exitAnim="@anim/slide_out_bottom" app:popUpTo="@id/TaskFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/action_TaskFragment_to_taskCorrectionFragment" app:destination="@id/taskCorrectionFragment" app:popUpTo="@id/TaskFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/action_TaskFragment_to_fragmentChildTask" app:destination="@id/fragmentChildTask" />
+        <action android:id="@id/action_TaskFragment_to_editorCanvansFragment" app:destination="@id/editorCanvansFragment" />
+        <action android:id="@id/action_TaskFragment_to_VideoPlayerFragment" app:destination="@id/VideoPlayerFragment" app:enterAnim="@anim/slide_in_bottom" app:exitAnim="@anim/slide_out_bottom" />
+        <action android:id="@id/action_TaskFragment_to_SettingsFragments" app:destination="@id/SettingsFragments" />
+        <action android:id="@id/actionTaskToLocation" app:destination="@id/taskLocationFragment" app:enterAnim="@anim/slide_in_bottom" app:exitAnim="@anim/slide_out_bottom" />
+        <action android:id="@id/action_TaskFragment_to_MapYandexFragment" app:destination="@id/yandexMapFragment" />
+        <action android:id="@id/action_TaskFragment_to_yandexNavigationFragment" app:destination="@id/yandexNavigationFragment" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.tasks.documents.DocumentsFragment" android:id="@id/DocumentsFragment">
+        <argument android:name="taskId" app:argType="string" />
+        <action android:id="@id/actionDocumentToCapture" app:destination="@id/CaptureFragment" app:enterAnim="@anim/slide_in_bottom" app:exitAnim="@anim/slide_out_bottom" app:popUpTo="@id/DocumentsFragment" app:popUpToInclusive="false" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.tasks.documents.CaptureFragment" android:id="@id/CaptureFragment">
+        <argument android:name="taskId" app:argType="string" />
+        <action android:id="@id/actionCaptureToCapture" app:destination="@id/CaptureFragment" app:enterAnim="@anim/slide_in_bottom" app:exitAnim="@anim/slide_out_bottom" app:popUpTo="@id/DocumentsFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/actionCaptureToDocFiles" app:destination="@id/documentFilesFragment" app:enterAnim="@anim/slide_in_bottom" app:exitAnim="@anim/slide_out_bottom" app:popUpTo="@id/DocumentsFragment" app:popUpToInclusive="false" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.camerax.CameraFragment" android:id="@id/CameraFragment">
+        <argument android:name="path" app:argType="string" app:nullable="true" />
+        <argument android:name="rakursId" app:argType="string" app:nullable="true" />
+        <argument android:name="workTypeId" app:argType="string" app:nullable="true" />
+        <argument android:name="taskId" app:argType="string" />
+        <argument android:name="longitude" app:argType="string" />
+        <argument android:name="latitude" app:argType="string" />
+        <argument android:name="showPhoto" app:argType="boolean" />
+        <argument android:name="showVideo" app:argType="boolean" />
+        <argument android:name="serviceFileType" app:argType="ru.spaceapp.infocity.android.app.domain.enums.ServiceFileType" />
+        <action android:id="@id/action_CameraFragment_to_VideoPlayerFragment" app:destination="@id/VideoPlayerFragment" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.camerax.video.VideoPlayerFragment" android:id="@id/VideoPlayerFragment">
+        <argument android:name="pathVideo" app:argType="string" />
+        <argument android:name="pathFrame" app:argType="string" app:nullable="true" />
+        <argument android:name="readOnlyMode" app:argType="boolean" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.synchronization.SynchFilesFragment" android:id="@id/SynchFilesFragment">
+        <argument android:name="taskId" app:argType="string" app:nullable="true" />
+        <action android:id="@id/actionSynchFilesToTask" app:destination="@id/TaskFragment" app:launchSingleTop="false" app:popUpTo="@id/SynchFilesFragment" app:popUpToInclusive="false" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.settings.cache.SettingsCacheFragment" android:id="@id/SettingsCacheFragment" />
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.map.LocationInfoFragment" android:id="@id/LocationInfoFragment">
+        <action android:id="@id/action_LocationInfoFragment_to_mapSettingsFragment" app:destination="@id/mapSettingsFragment" />
+        <argument android:name="isFromTask" android:defaultValue="false" app:argType="boolean" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.map.SelectedObjectsFragment" android:id="@id/objectsSelectedFragment" />
+    <fragment android:label=" " android:name="ru.spaceapp.infocity.android.app.ui.tasks.create.CreateTaskFragment" android:id="@id/CreateTaskFragment">
+        <action android:id="@id/actionCreateTaskToTask" app:destination="@id/TaskFragment" app:popUpTo="@id/TasksFragment" app:popUpToInclusive="false" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.tasks.edit.EditTaskFragment" android:id="@id/EditTaskFragment">
+        <argument android:name="task" app:argType="ru.spaceapp.infocity.android.app.domain.entity.Task" />
+    </fragment>
+    <action android:id="@id/actionGlobalToTask" app:destination="@id/TaskFragment" app:launchSingleTop="true" app:popUpTo="@id/TasksFragment" app:popUpToInclusive="false" />
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.settings.rules.RulePermissionsFragment" android:id="@id/RulePermissionsFragment" />
+    <fragment android:label="TaskCorrectionFragment" android:name="ru.spaceapp.infocity.android.app.ui.tasks.task.TaskCorrectionFragment" android:id="@id/taskCorrectionFragment">
+        <argument android:name="taskId" app:argType="string" />
+        <argument android:name="TaskCor" app:argType="ru.spaceapp.infocity.android.app.domain.entity.TaskFile" />
+        <argument android:name="path" app:argType="string" />
+        <argument android:name="id" app:argType="string" />
+        <action android:id="@id/action_taskCorrectionFragment_to_CameraFragment" app:destination="@id/CameraFragment" />
+    </fragment>
+    <fragment android:label="fragment_child_task" android:name="ru.spaceapp.infocity.android.app.ui.tasks.task.childTask.FragmentChildTask" android:id="@id/fragmentChildTask">
+        <argument android:name="taskFile" app:argType="ru.spaceapp.infocity.android.app.domain.entity.TaskFile" />
+        <argument android:name="position" app:argType="integer" />
+        <argument android:name="taskId" app:argType="string" />
+        <action android:id="@id/actionChildTaskToTask" app:destination="@id/TaskFragment" app:popUpTo="@id/MapFragment" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:label="fragment_editor_canvans" android:name="ru.spaceapp.infocity.android.app.ui.tasks.task.canvasEditor.EditorCanvansFragment" android:id="@id/editorCanvansFragment">
+        <argument android:name="TaskFile" app:argType="ru.spaceapp.infocity.android.app.domain.entity.TaskFile" />
+    </fragment>
+    <fragment android:label="CarAccountingFragment" android:name="ru.spaceapp.infocity.android.app.ui.carAccounting.CarAccountingFragment" android:id="@id/CarAccountingFragment">
+        <action android:id="@id/action_carAccountingFragment_to_carTaskCreateFragment" app:destination="@id/carTaskCreateFragment" />
+        <action android:id="@id/action_CarAccountingFragment_to_arrivalEquipmentFragment" app:destination="@id/arrivalEquipmentFragment" />
+        <action android:id="@id/action_CarAccountingFragment_to_taskCarFilterFragment" app:destination="@id/taskCarFilterFragment" />
+    </fragment>
+    <fragment android:label="CarTaskCreateFragment" android:name="ru.spaceapp.infocity.android.app.ui.carAccounting.createCarTask.CarTaskCreateFragment" android:id="@id/carTaskCreateFragment">
+        <action android:id="@id/action_carTaskCreateFragment_to_CarAccountingFragment" app:destination="@id/CarAccountingFragment" />
+    </fragment>
+    <fragment android:label="ArrivalEquipmentFragment" android:name="ru.spaceapp.infocity.android.app.ui.carAccounting.controlCar.ArrivalEquipmentFragment" android:id="@id/arrivalEquipmentFragment">
+        <action android:id="@id/action_arrivalEquipmentFragment_to_CarAccountingFragment" app:destination="@id/CarAccountingFragment" />
+    </fragment>
+    <fragment android:label="FlightsCarsDirectorsFragment" android:name="ru.spaceapp.infocity.android.app.ui.carAccounting.flightsCarsDirectors.FlightsCarsDirectorsFragment" android:id="@id/FlightsCarsDirectorsFragment">
+        <action android:id="@id/action_flightsCarsDirectorsFragment_to_taskCarFilterFragment" app:destination="@id/taskCarFilterFragment" />
+        <action android:id="@id/action_FlightsCarsDirectorsFragment_to_statisticsCarFragment" app:destination="@id/statisticsCarFragment" />
+    </fragment>
+    <fragment android:label="TaskCarFilterFragment" android:name="ru.spaceapp.infocity.android.app.ui.carAccounting.flightsCarsDirectors.TaskCarFilterFragment" android:id="@id/taskCarFilterFragment">
+        <argument android:name="filter" app:argType="ru.spaceapp.infocity.android.app.domain.filters.CarTaskFilterParcelable" />
+        <action android:id="@id/action_taskCarFilterFragment_to_statisticsCarFragment" app:destination="@id/statisticsCarFragment" />
+        <argument android:name="checkFtagment" app:argType="string" />
+    </fragment>
+    <fragment android:label="StatisticsCarFragment" android:name="ru.spaceapp.infocity.android.app.ui.carAccounting.flightsCarsDirectors.carstatistics.StatisticsCarFragment" android:id="@id/statisticsCarFragment">
+        <action android:id="@id/action_statisticsCarFragment_to_flightsCarsDirectorsFragment" app:destination="@id/FlightsCarsDirectorsFragment" />
+        <argument android:name="filter" app:argType="ru.spaceapp.infocity.android.app.domain.filters.CarTaskFilterParcelable" app:nullable="true" />
+    </fragment>
+    <action android:id="@id/actionGlobalToDir" app:destination="@id/FlightsCarsDirectorsFragment" app:popUpTo="@id/FlightsCarsDirectorsFragment" />
+    <action android:id="@id/actionGlobalToCars2" app:destination="@id/CarAccountingFragment" app:popUpTo="@id/CarAccountingFragment" />
+    <dialog android:label="DialogFilter" android:name="ru.spaceapp.infocity.android.app.ui.dialogs.TaskDialog" android:id="@id/dialogTask" />
+    <action android:id="@id/toDialogTask" app:destination="@id/dialogTask" />
+    <fragment android:label="DocumentFilesFragment" android:name="ru.spaceapp.infocity.android.app.ui.tasks.documents.DocFilesFragment" android:id="@id/documentFilesFragment">
+        <argument android:name="taskId" app:argType="string" />
+        <argument android:name="filePath" app:argType="string" />
+        <action android:id="@id/actionDocFileToCapture" app:destination="@id/CaptureFragment" app:enterAnim="@anim/slide_in_bottom" app:exitAnim="@anim/slide_out_bottom" app:popUpTo="@id/DocumentsFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/action_DocFilesFragment_to_DocumentsFragment" app:destination="@id/DocumentsFragment" app:popUpTo="@id/TaskFragment" />
+    </fragment>
+    <fragment android:label="TaskLocationFragment" android:name="ru.spaceapp.infocity.android.app.ui.tasks.task.TaskLocationFragment" android:id="@id/taskLocationFragment">
+        <argument android:name="latitude" app:argType="string" />
+        <argument android:name="longitude" app:argType="string" />
+    </fragment>
+    <fragment android:label="MapTaskFragment" android:name="ru.spaceapp.infocity.android.app.ui.task.MapTaskFragment" android:id="@id/mapTaskFragment">
+        <argument android:name="latitude" app:argType="string" />
+        <argument android:name="longitude" app:argType="string" />
+    </fragment>
+    <fragment android:label="MapSettingsFragment" android:name="ru.spaceapp.infocity.android.app.ui.map.MapSettingsFragment" android:id="@id/mapSettingsFragment">
+        <action android:id="@id/action_mapSettingsFragment_to_MapFragment" app:destination="@id/MapFragment" app:popUpTo="@id/googleMapFragment" app:popUpToInclusive="true" />
+        <argument android:name="isFromTask" android:defaultValue="false" app:argType="boolean" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.map.YandexMapFragment" android:id="@id/yandexMapFragment">
+        <action android:id="@id/action_YandexMapFragment_to_LocationInfoFragment" app:destination="@id/LocationInfoFragment" />
+        <action android:id="@id/action_YandexMapFragment_to_mapTaskFragment" app:destination="@id/mapTaskFragment" app:popUpTo="@id/yandexMapFragment" app:popUpToInclusive="true" />
+        <action android:id="@id/action_YandexMapFragment_to_carTaskCreateFragment" app:destination="@id/carTaskCreateFragment" />
+        <action android:id="@id/action_YandexMapFragment_to_arrivalEquipmentFragment" app:destination="@id/arrivalEquipmentFragment" />
+        <action android:id="@id/action_YandexMapFragment_to_objectsSelectedFragment" app:destination="@id/objectsSelectedFragment" app:popUpTo="@id/yandexMapFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/action_YandexMapFragment_to_TaskFragment" app:destination="@id/TaskFragment" />
+        <argument android:name="isFromTask" android:defaultValue="false" app:argType="boolean" />
+        <argument android:name="jsonTaskDataForMaps" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.map.GoogleMapFragment" android:id="@id/googleMapFragment">
+        <action android:id="@id/action_GoogleMapFragment_to_LocationInfoFragment" app:destination="@id/LocationInfoFragment" />
+    </fragment>
+    <fragment android:name="ru.spaceapp.infocity.android.app.ui.map.OsmMapFragment" android:id="@id/osmMapFragment">
+        <action android:id="@id/action_osmMapFragment_to_LocationInfoFragment" app:destination="@id/LocationInfoFragment" />
+    </fragment>
+    <fragment android:label="MapBarrelsFragment" android:name="ru.spaceapp.infocity.android.app.ui.map.MapBarrelsFragment" android:id="@id/mapBarrelsFragment" />
+    <fragment android:label="YandexNavigationFragment" android:name="ru.spaceapp.infocity.android.app.ui.map.YandexNavigationFragment" android:id="@id/yandexNavigationFragment">
+        <argument android:name="taskId" app:argType="string" />
+    </fragment>
+</navigation>

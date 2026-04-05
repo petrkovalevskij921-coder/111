@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/snackBarBgColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/task_detail_app_bar" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" app:liftOnScroll="true">
+        <com.google.android.material.appbar.MaterialToolbar android:id="@id/document_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:contentInsetStart="0.0sp" android:contentInsetLeft="0.0sp" app:contentInsetLeft="0.0sp" app:contentInsetStart="0.0sp" app:layout_collapseMode="pin" app:navigationIconTint="@color/secondaryColor" app:title="@null" app:titleCentered="true" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/task_detail_app_bar">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rvDocument" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="16.0dip" app:layout_constraintBottom_toTopOf="@id/scanTv" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textStyle="bold" android:textColor="@color/secondaryDarkColor" android:gravity="center" android:id="@id/scanTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="24.0dip" android:text="@string/scan_text" android:drawableTop="@drawable/ic_add_scan_48dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" />
+        <androidx.compose.ui.platform.ComposeView android:id="@id/stickers_dialog_compose" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

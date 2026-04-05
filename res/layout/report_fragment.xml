@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/snackBarBgColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/report_app_bar" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" app:liftOnScroll="true">
+        <com.google.android.material.appbar.MaterialToolbar android:id="@id/report_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:contentInsetStart="0.0sp" android:contentInsetLeft="0.0sp" app:contentInsetLeft="0.0sp" app:contentInsetStart="0.0sp" app:layout_collapseMode="pin" app:navigationIconTint="@color/secondaryColor" app:title="@null" app:titleCentered="true">
+            <androidx.compose.ui.platform.ComposeView android:layout_gravity="end|center" android:id="@id/reportActionButtons" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginEnd="16.0dip" />
+            <TextView android:textStyle="bold" android:textColor="@color/black" android:ellipsize="marquee" android:layout_gravity="start|center" android:id="@id/report_title_text" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/report_app_bar">
+        <androidx.compose.ui.platform.ComposeView android:id="@id/pdfViewer" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/loadingProgressBar" android:background="@color/loading_transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="?android:progressBarStyle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

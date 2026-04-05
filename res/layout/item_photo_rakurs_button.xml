@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_photo_rakurs_button_0" android:layout_width="85.0sp" android:layout_height="140.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/task_detail_files_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="4.0dip">
+        <com.google.android.material.button.MaterialButton android:id="@id/open_camera_button" android:layout_width="70.0sp" android:layout_height="67.0sp" app:backgroundTint="@color/app_blue" app:icon="@drawable/ic_baseline_photo_camera_24" app:iconGravity="top" app:iconSize="50.0sp" app:iconTint="@color/white" style="@style/Widget.MaterialComponents.Button.Icon" />
+        <TextView android:textStyle="bold" android:gravity="center" android:id="@id/text_camera" android:layout_width="70.0sp" android:layout_height="67.0sp" android:text="@string/photoRukurs" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <View android:id="@id/cover_image_item_divider" android:background="@color/divider_color" android:layout_width="1.0dip" android:layout_height="55.0dip" android:layout_centerVertical="true" android:layout_marginEnd="5.0sp" android:layout_alignParentEnd="true" />
+</RelativeLayout>

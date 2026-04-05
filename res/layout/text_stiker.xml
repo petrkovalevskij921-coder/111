@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView android:textSize="@dimen/text16" android:textColor="@android:color/white" android:ellipsize="end" android:id="@id/sticker_banner_view" android:tag="layout/text_stiker_0" android:background="@color/green" android:paddingTop="4.0sp" android:paddingBottom="4.0sp" android:layout_width="fill_parent" android:layout_height="30.0sp" android:maxLines="1" android:paddingStart="5.0dip" android:paddingEnd="1.0dip" android:layout_marginStart="0.0sp" android:elevation="10.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

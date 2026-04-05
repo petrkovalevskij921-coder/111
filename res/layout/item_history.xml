@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:tag="layout/item_history_0" android:background="@drawable/history_rounded_bg" android:padding="8.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:textStyle="bold" android:textColor="?colorOnSurface" android:id="@id/history_creator" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <androidx.appcompat.widget.AppCompatTextView android:textColor="?colorOnSurface" android:id="@id/history_text" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:layout_below="@id/history_creator" />
+    <View android:id="@id/history_item_divider" android:background="@color/divider_color" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="12.0dip" android:layout_below="@id/history_text" />
+    <androidx.appcompat.widget.AppCompatTextView android:textColor="?colorOnSurface" android:id="@id/history_created_date" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:layout_below="@id/history_item_divider" android:layout_alignParentEnd="true" />
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/linearLayoutCompat" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.textview.MaterialTextView android:textSize="@dimen/text20" android:id="@id/text_data_from" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Дата и время с:" />
+        <com.google.android.material.textview.MaterialTextView android:textSize="@dimen/text20" android:id="@id/text_data_to" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Дата и время по:" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_statistics" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/linear_itogo" app:layout_constraintTop_toBottomOf="@id/linearLayoutCompat" />
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/linear_itogo" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.textview.MaterialTextView android:textSize="@dimen/text20" android:textStyle="bold" android:id="@id/text_total" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+        <com.google.android.material.button.MaterialButton android:layout_gravity="center" android:id="@id/filter_cancel_button" android:text="@string/button_close" android:layout_marginStart="8.0sp" android:backgroundTint="@color/red" style="@style/CorneredRoundButtonStyle" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

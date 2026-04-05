@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:id="@id/task_card" android:tag="layout/item_car_task_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:foreground="?selectableItemBackground" android:layout_marginStart="5.0sp" android:layout_marginEnd="5.0sp" app:cardElevation="24.0sp" app:cardMaxElevation="31.0sp" app:cardUseCompatPadding="false" app:contentPadding="0.0sp" app:strokeWidth="0.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:id="@id/linear_cintainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/linear_left" android:focusable="true" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/key_tab_item_height" android:layout_weight="60.0" android:layout_marginStart="5.0dip" android:elevation="4.0dip">
+            <TextView android:textSize="@dimen/text16" android:id="@id/text_data_and_time" android:layout_width="fill_parent" android:layout_height="@dimen/text20" android:layout_marginTop="@dimen/spacing_tiny" android:text="@string/data_car" />
+            <TextView android:textSize="@dimen/text16" android:id="@id/text_district" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="@dimen/spacing_tiny" android:text="@string/district" />
+            <TextView android:textSize="@dimen/text16" android:id="@id/text_task_type" android:layout_width="fill_parent" android:layout_height="@dimen/text20" android:layout_marginTop="@dimen/spacing_tiny" android:text="@string/task_type" />
+            <TextView android:textSize="@dimen/text16" android:id="@id/text_car_type" android:layout_width="fill_parent" android:layout_height="@dimen/text20" android:layout_marginTop="@dimen/spacing_tiny" android:text="@string/car_type" />
+            <TextView android:textSize="@dimen/text16" android:id="@id/text_organization" android:layout_width="fill_parent" android:layout_height="@dimen/text20" android:layout_marginTop="@dimen/spacing_tiny" android:text="@string/organization" />
+            <TextView android:id="@id/text_car_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/car_number" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/linear_right" android:focusable="true" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/key_tab_item_height" android:layout_weight="35.0" android:elevation="4.0dip">
+            <TextView android:textSize="@dimen/text16" android:id="@id/text_data_and_time_end" android:layout_width="fill_parent" android:layout_height="@dimen/text20" android:layout_marginTop="@dimen/spacing_tiny" />
+            <TextView android:textSize="@dimen/text16" android:id="@id/text_district_end" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="@dimen/spacing_tiny" />
+            <TextView android:textSize="@dimen/text16" android:id="@id/text_task_type_end" android:layout_width="fill_parent" android:layout_height="@dimen/text20" android:layout_marginTop="@dimen/spacing_tiny" />
+            <TextView android:textSize="@dimen/text16" android:id="@id/text_car_type_end" android:layout_width="fill_parent" android:layout_height="@dimen/text20" android:layout_marginTop="@dimen/spacing_tiny" />
+            <TextView android:textSize="@dimen/text16" android:id="@id/text_organization_end" android:layout_width="fill_parent" android:layout_height="@dimen/text20" android:layout_marginTop="@dimen/spacing_tiny" />
+            <TextView android:textSize="@dimen/text16" android:id="@id/text_car_number_end" android:layout_width="fill_parent" android:layout_height="@dimen/text20" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/select_only_this_stage" android:visible="true" android:title="@string/select_only_this_stage" app:showAsAction="ifRoom|withText" />
+    <item android:id="@id/selecting_all_stages" android:visible="true" android:title="@string/selecting_all_stages" app:showAsAction="ifRoom|withText" />
+</menu>
